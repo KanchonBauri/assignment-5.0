@@ -10,30 +10,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="  ">
-    <header class="bg-[#F9F7F3]  py-5">
-        <nav class=" w-11/12 m-auto border-slate-950 flex justify-between ">
+<body class="">
+    <div class=" ">
+        <header class="bg-[#F9F7F3] top-0 left-0 right-0  py-5">
+            <nav class=" w-11/12 m-auto border-slate-950 flex justify-between  ">
 
-            <button class=" px-8 font-bold rounded-md p-2 sm:btn-sm flex items-center bg-[#B4F461]">Blog</button>
+                <button class=" px-8 font-bold rounded-md p-2 sm:btn-sm flex items-center bg-[#B4F461]">Blog</button>
 
-            <div class="flex items-center gap-1 ">
-                <img class="h-7" src="./assets/logo.png" alt="">
-                <h2 class="font-bold">Donate Bangladesh</h2>
-            </div>
+                <div class="flex items-center gap-1 ">
+                    <img class="h-7" src="./assets/logo.png" alt="">
+                    <h2 class="font-bold">Donate Bangladesh</h2>
+                </div>
 
-            <div class="flex items-center gap-1 ">
-                <img class="h-7" src="./assets/coin.png" alt="">
-                <h2 class="font-bold"><span>5500</span>BDT</h2>
-            </div>
+                <div class="flex items-center gap-1 ">
+                    <img class="h-7" src="./assets/coin.png" alt="">
+                    <h2 class="font-bold"><span id="current-balance">5500</span>BDT</h2>
+                </div>
 
-        </nav>
-    </header>
+            </nav>
+        </header>
+    </div>
     <main class="w-11/12 m-auto">
 
         <div>
             <div class="flex justify-center gap-5 mt-5 md:mt-8">
                 <button
-                    class=" font-bold rounded-md md:px-10 px-5 py-2 md:py-5 sm:btn-sm flex items-center border border-pink-300 hover:bg-[#B4F461]">Responsive</button>
+                    class=" font-bold rounded-md md:px-10 px-5 py-2 md:py-5 sm:btn-sm flex items-center border border-pink-300 hover:bg-[#B4F461]">Donation</button>
                 <button
                     class="font-bold rounded-md md:px-10 px-5 py-2  md:py-5 sm:btn-sm flex items-center border border-pink-300 hover:bg-[#B4F461]">History</button>
             </div>
@@ -42,40 +44,90 @@
         <div>
             <div class="hero border rounded-2xl mt-6 ">
                 <div class="hero-content flex-col gap-10 w-12/12 lg:flex-row">
-                   <img class="md:w-5/12 md:h-80  " src="./assets/noakhali.png" alt="">
+
+                    <img class="md:w-5/12 md:h-80  " src="./assets/noakhali.png" alt="">
+
                     <div class="md:w-6/12">
+                        
+                    <div class="flex items-center mb-3 gap-1 ">
+                        <img class="h-7" src="./assets/coin.png" alt="">
+                        <h2 class="font-bold"><span id="noakhai-balance">00</span>BDT</h2>
+                    </div>
+
                         <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                         <p class="py-6">
-                            The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                            The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                            donation will help provide essential supplies and to those affected by this disaster. Every
+                            contribution, big or small, makes difference. Please join us in supporting the relief
+                            efforts and making a positive impact on the lives of those in need.
                         </p>
-                        <button class="btn btn-primary">Get Started</button>
+                        <input id="donation-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+                        <div class="label">
+                            <button onclick="donationHandle(event)"
+                                class=" font-bold rounded-md w-full text-center bg-[#B4F461] md:px-10 px-5 py-2 md:py-5 sm:btn-sm items-center flex justify-center hover:bg-[#B4F461]">Responsive</button>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
             <div class="hero border rounded-2xl mt-6 ">
                 <div class="hero-content flex-col gap-10 w-12/12 lg:flex-row">
-                   <img class="md:w-5/12 md:h-80  " src="./assets/feni.png" alt="">
+
+                    <img class="md:w-5/12 md:h-80  " src="./assets/feni.png" alt="">
+
                     <div class="md:w-6/12">
+
+                        <div class="flex items-center mb-3 gap-1 ">
+                            <img class="h-7" src="./assets/coin.png" alt="">
+                            <h2 class="font-bold"><span id="feni-balance">2500</span>BDT</h2>
+                        </div>
+    
                         <h1 class="text-lg font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                         <p class="py-6">
-                            The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                            The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                            donation will help provide essential supplies and to those affected by this disaster. Every
+                            contribution, big or small, makes difference. Please join us in supporting the relief
+                            efforts and making a positive impact on the lives of those in need.
                         </p>
-                        <button class="btn btn-primary">Get Started</button>
+                        <input id="donation-input2" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+                        <div class="label">
+                            <button onclick="donationHandle2(event)"
+                                class=" font-bold rounded-md w-full text-center bg-[#B4F461] md:px-10 px-5 py-2 md:py-5 sm:btn-sm items-center flex justify-center hover:bg-[#B4F461]">Donation</button>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
             <div class="hero border rounded-2xl mt-6 ">
                 <div class="hero-content flex-col gap-10 w-12/12 lg:flex-row">
-                   <img class="md:w-5/12 md:h-80  " src="./assets/quota-protest.png" alt="">
+
+                    <img class="md:w-5/12 md:h-80  " src="./assets/quota-protest.png" alt="">
+
                     <div class="md:w-6/12">
+
+                        <div class="flex items-center mb-3 gap-1 ">
+                            <img class="h-7" src="./assets/coin.png" alt="">
+                            <h2 class="font-bold"><span id="quota-balance">3000</span>BDT</h2>
+                        </div>
+
                         <h1 class="text-lg font-bold">Aid for Injured in the Quota Movement</h1>
-                        <p class="py-6"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                        <p class="py-6"> The recent floods in Noakhali have caused significant damage to homes
+                            infrastructure. Your donation will help provide essential supplies and to those affected by
+                            this disaster. Every contribution, big or small, makes difference. Please join us in
+                            supporting the relief efforts and making a positive impact on the lives of those in need.
                         </p>
-                        <button class="btn btn-primary">Get Started</button>
+                        <input id="donation-input3" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+                        <div class="label">
+                            <button onclick="donationHandle3(event)"
+                                class=" font-bold rounded-md w-full text-center bg-[#B4F461] md:px-10 px-5 py-2 md:py-5 sm:btn-sm items-center flex justify-center hover:bg-[#B4F461]">Donation</button>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
-        </div>
 
     </main>
     <script src="./js/index.js"></script>
