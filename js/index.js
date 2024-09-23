@@ -2,6 +2,8 @@ const donationInputEl = document.getElementById('donation-input')
 const noakhaiBalanceEl = document.getElementById('noakhai-balance')
 const currentBalanceEl = document.getElementById('current-balance')
 
+// const modal1 = document.getElementById('my_modal_1')
+
 const donationInputEl2 = document.getElementById('donation-input2')
 const feniBalanceEl2 = document.getElementById('feni-balance')
 
@@ -27,7 +29,18 @@ function donationHandle(event) {
     // console.log(noakhaiBalance)
     const newNoakhaliBalance = noakhaiBalance + donationInputValue;
     // console.log(newNoakhaliBalance)
-    return noakhaiBalanceEl.innerText = newNoakhaliBalance;
+    noakhaiBalanceEl.innerText = newNoakhaliBalance;
+
+// -----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+// return modal1;
+
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------
 }
 
 // -----------------------------------------------feni---------------------------------------
