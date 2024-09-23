@@ -10,10 +10,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-white ">
     <div class="relative">
-        <div class="border pb-5  fixed top-0 left-0 right-0 ">
-            <header class="bg-[#F9F7F3]  py-5">
+        <div class=" bg-[#f2f1ef] bg-opacity-30   border pb-5 fixed top-0 left-0 right-0 ">
+            <header class="bg-[#535352] bg-opacity-30  py-5">
                 <nav class=" w-11/12 m-auto border-slate-950 flex justify-between  ">
 
                     <button
@@ -31,30 +31,27 @@
 
                 </nav>
             </header>
-            <div class="">
+            <div class=" ">
                 <div class="flex justify-center gap-5 mt-5 md:mt-8">
-                    <button
-                        class=" font-bold rounded-md md:px-10 px-5 py-2 md:py-5 sm:btn-sm flex items-center border border-pink-300 hover:bg-[#B4F461]">Donation</button>
-                    <button
-                        class="font-bold rounded-md md:px-10 px-5 py-2  md:py-5 sm:btn-sm flex items-center border border-pink-300 hover:bg-[#B4F461]">History</button>
+                    <button id="donation-tab"
+                        class=" font-bold rounded-md md:px-10 px-5 py-2  md:py-5 sm:btn-sm flex items-center border  border-pink-300  focus:bg-[#B4F461]  focus:border-none duration-200  ">Donation</button>
+                    <button id="history-tab"
+                        class="font-bold rounded-md md:px-10 px-5 py-2  md:py-5 sm:btn-sm flex items-center border border-pink-300  ">History</button>
                 </div>
             </div>
         </div>
-        <!-- <div class=""> -->
-        <main class="w-11/12 mx-auto mt-40 ">
-            <!-- <div class=""> -->
-            <!-- <div class="hero border  rounded-2xl mt-6"> -->
-            <div class="hero-content flex-col gap-10 w-12/12 lg:flex-row">
 
+
+        <!--=============================================== Main Section ========================================= -->
+        <main id="main-section" class="w-11/12 mx-auto mt-44 ">
+            <div class="hero-content flex-col gap-10 w-12/12 lg:flex-row border rounded-2xl shadow-lg mb-8">
                 <img class="md:w-5/12 md:h-80  " src="./assets/noakhali.png" alt="">
 
                 <div class="md:w-6/12">
-
                     <div class="flex items-center mb-3 gap-1 ">
                         <img class="h-7" src="./assets/coin.png" alt="">
                         <h2 class="font-bold"><span id="noakhai-balance">00</span>BDT</h2>
                     </div>
-
                     <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                     <p class="py-6">
                         The recent floods in Noakhali have caused significant damage to homes infrastructure.
@@ -70,14 +67,13 @@
                         <button onclick="donationHandle(event)"
                             class=" font-bold rounded-md w-full text-center bg-[#B4F461] md:px-10 px-5 py-2 md:py-5 sm:btn-sm items-center flex justify-center hover:bg-[#B4F461]">Responsive</button>
                     </div>
-
                 </div>
-
             </div>
-            <!-- </div> -->
 
-            <!-- <div class="hero border rounded-2xl mt-6 "> -->
-            <div class="hero-content flex-col gap-10 w-12/12 lg:flex-row">
+            <!--=============================================== History Section ========================================= -->
+           
+
+            <div class="hero-content flex-col gap-10 w-12/12 lg:flex-row border rounded-2xl shadow-lg mb-8">
 
                 <img class="md:w-5/12 md:h-80  " src="./assets/feni.png" alt="">
 
@@ -100,17 +96,17 @@
                     <input id="donation-input2" type="text" placeholder="Write Donation Amount"
                         class="input input-bordered w-full " />
                     <div class="label">
-                        <button onclick="donationHandle2(event) , my_modal_1.showModal()"
-                            class=" font-bold rounded-md w-full text-center bg-[#B4F461] md:px-10 px-5 py-2 md:py-5 sm:btn-sm items-center flex justify-center hover:bg-[#B4F461]">Donation</button>
+                        <button onclick="donationHandle2(event) "
+                            class=" font-bold rounded-md w-full text-center bg-[#B4F461] md:px-10 px-5 py-2 md:py-5 sm:btn-sm items-center flex justify-center hover:bg-[#B4F461]">Donate
+                            Now
+                        </button>
                     </div>
 
                 </div>
 
             </div>
-            <!-- </div> -->
 
-            <!-- <div class="hero border rounded-2xl mt-6 "> -->
-            <div class="hero-content flex-col gap-10 w-12/12 lg:flex-row">
+            <div class="hero-content flex-col gap-10 w-12/12 lg:flex-row border rounded-2xl shadow-lg mb-8">
 
                 <img class="md:w-5/12 md:h-80  " src="./assets/quota-protest.png" alt="">
 
@@ -137,7 +133,6 @@
                     </div>
                 </div>
             </div>
-            <!-- </div> -->
             <!-- Open the modal using ID.showModal() method -->
             <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
             <dialog id="my_modal_1" class="modal">
@@ -146,19 +141,24 @@
                     <img class="w-1/12 mx-auto" src="./assets/coin.png" alt="">
                     <p class="py-4">You Have Donated for Humankind</p>
                     <h3 class="text-lg font-bold">Successfully</h3>
-                    <div class="modal-action">
-                        <form method="dialog ">
+                    <div class="btn bg-[#B4F461]">
+                        <form method="">
                             <!-- if there is a button in form, it will close the modal -->
-                            <div class="flex justify-center"><button class="  font-bold ">close
+                            <div class="flex justify-center"><button class=" font-bold ">close
                                     confirmation</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </dialog>
-            <!-- </div> -->
         </main>
-        <!-- </div> -->
+
+        <div id="history-section" class="mt-44 w-11/12 mx-auto">
+            <div id="history-container" >
+
+            </div>
+        </div>
+
     </div>
 
 
