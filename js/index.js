@@ -18,10 +18,14 @@ function donationHandle(event) {
     const donationInput = (donationInputEl.value);
     if (isNaN(donationInput) || donationInput <= 0) {
         return alert('invalid input')
-    } 
+    }
 
     const donationInputValue = parseFloat(donationInput);
     const currentBalance = parseFloat(currentBalanceEl.innerText);
+
+    if(currentBalance < donationInputValue){
+        return alert('Uncufficent Balance')
+    }
     const newCurrentBalance = currentBalance - donationInputValue;
     currentBalanceEl.innerText = newCurrentBalance;
 
@@ -142,18 +146,19 @@ donationTab.addEventListener('click', function () {
 })
 
 // <!-- =============================================== Blog section ============================================== -->
-
 const blog = document.getElementById('blog-btn').addEventListener('click', function () {
     const blogSection = document.getElementById('blog-section');
     blogSection.classList.remove('hidden')
     mainSection.classList.add('hidden');
 
     document.getElementById("history-section").classList.add("hidden")
+
+    donationTab.classList.remove("bg-[#B4F461]", "focus:border-none", "duration-200", "text-white");
+
 })
 
 
-
-
+// <!-- =============================================== modal section ============================================== -->
 const close = document.getElementById('close').addEventListener('click', function () {
     // e.preventDefault();
     const modal = document.getElementById('modal');
