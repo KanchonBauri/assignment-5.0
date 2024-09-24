@@ -31,6 +31,8 @@
 
                 </nav>
             </header>
+
+            <!-- // -----------------------------------donation and history button  ------------------------------ -->
             <div id="btn-section" class=" ">
                 <div class="flex justify-center gap-5 mt-5 md:mt-8">
                     <button id="donation-tab"
@@ -40,16 +42,17 @@
                 </div>
             </div>
 
+            <!-- // ----------------------------------- Modal section  ------------------------------ -->
             <div id="modal" class="modal-box flex-col justify-center ml-96 hidden fixed text-center">
-               <div>
-                <h3 class="text-lg font-bold">Congrates!</h3>
-                <img class="w-1/12 mx-auto" src="./assets/coin.png" alt="">
-                <p class="py-4">You Have Donated for Humankind</p>
-                <h3 class="text-lg font-bold">Successfully</h3>
-                <div class="btn bg-[#B4F461]">
-                    <button id="close" >Close</button>
+                <div>
+                    <h3 class="text-5xl mb-4 font-bold">Congrates!</h3>
+                    <img class="w-24 mx-auto" src="./assets/coin.png" alt="">
+                    <p class="py-4">You Have Donated for Humankind</p>
+                    <h3 class="text-lg font-bold">Successfully</h3>
+                    <div id="close" class="btn bg-[#B4F461]">
+                        <button>Close</button>
+                    </div>
                 </div>
-               </div>
             </div>
 
         </div>
@@ -57,53 +60,43 @@
 
         <!--=============================================== Main Section ========================================= -->
         <main id="main-section" class="w-11/12 mx-auto mt-44">
+            <!-- // -----------------------------------noakhali section ------------------------------ -->
             <div class="hero-content flex-col gap-10 w-12/12 md:flex-row lg:flex-row border rounded-2xl shadow-lg mb-8">
                 <img class="md:w-5/12 md:h-80  " src="./assets/noakhali.png" alt="">
 
                 <div class="md:w-6/12">
-                    <div class="flex items-center mb-3 gap-1 bg-rose-300 p-2 rounded-lg w-32">
+                    <div class="flex items-center mb-3 gap-1 bg-rose-300 p-2 rounded-lg w-36">
                         <img class="h-7" src="./assets/coin.png" alt="">
                         <h2 class="font-bold "><span id="noakhai-balance">00</span>BDT</h2>
                     </div>
                     <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                     <p class="py-6">
-                        The recent floods in Noakhali have caused significant damage to homes infrastructure.
-                        Your
-                        donation will help provide essential supplies and to those affected by this disaster.
-                        Every
-                        contribution, big or small, makes difference. Please join us in supporting the relief
-                        efforts and making a positive impact on the lives of those in need.
+                        Bangladesh is currently facing a devastating flood crisis, and the district of Noakhali has been hit particularly hard. Thousands of people have lost their homes, livelihoods, and all sense of security. Families are struggling to survive, with many left homeless, in debt, and without access to basic necessities.
                     </p>
                     <input id="donation-input" type="text" placeholder="Write Donation Amount"
                         class="input input-bordered w-full " />
                     <div class="label">
                         <button onclick="donationHandle(event)"
-                            class=" font-bold rounded-md w-full text-center bg-[#B4F461] md:px-10 px-5 py-2 md:py-5 sm:btn-sm items-center flex justify-center hover:bg-[#B4F461]">Responsive</button>
+                            class=" font-bold rounded-md w-full text-center bg-[#B4F461] md:px-10 px-5 py-2 md:py-5 sm:btn-sm items-center flex justify-center hover:bg-[#B4F461]">Donation Now</button>
                     </div>
                 </div>
             </div>
 
-
-
+            <!-- // ----------------------------------- feni section ------------------------------ -->
             <div class="hero-content flex-col gap-10 w-12/12 lg:flex-row border md:flex-row rounded-2xl shadow-lg mb-8">
 
                 <img class="md:w-5/12 md:h-80  " src="./assets/feni.png" alt="">
 
                 <div class="md:w-6/12">
 
-                    <div class="flex items-center mb-3 gap-1  bg-rose-300 p-2 rounded-lg w-32">
+                    <div class="flex items-center mb-3 gap-1  bg-rose-300 p-2 rounded-lg w-36">
                         <img class="h-7" src="./assets/coin.png" alt="">
                         <h2 class="font-bold"><span id="feni-balance">2500</span>BDT</h2>
                     </div>
 
                     <h1 class="text-lg font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                     <p class="py-6">
-                        The recent floods in Noakhali have caused significant damage to homes infrastructure.
-                        Your
-                        donation will help provide essential supplies and to those affected by this disaster.
-                        Every
-                        contribution, big or small, makes difference. Please join us in supporting the relief
-                        efforts and making a positive impact on the lives of those in need.
+                        In the wake of the recent catastrophic floods, countless lives have been turned upside down in Feni, Comilla, and surrounding areas of Noakhali. Homes have been lost, communities have been shattered, and the basic necessities that so many of us take for granted have been swept away in the rushing waters. Families who once knew stability now face an uncertain future, wondering where they will find shelter, food, and comfort in the days ahead.  
                     </p>
                     <input id="donation-input2" type="text" placeholder="Write Donation Amount"
                         class="input input-bordered w-full " />
@@ -118,30 +111,26 @@
 
             </div>
 
+            <!-- // ----------------------------------- Quota section ------------------------------ -->
             <div class="hero-content flex-col gap-10 w-12/12 lg:flex-row border md:flex-row rounded-2xl shadow-lg mb-8">
 
                 <img class="md:w-5/12 md:h-80  " src="./assets/quota-protest.png" alt="">
 
                 <div class="md:w-6/12">
 
-                    <div class="flex items-center mb-3 gap-1  bg-rose-300 p-2 rounded-lg w-32">
+                    <div class="flex items-center mb-3 gap-1  bg-rose-300 p-2 rounded-lg w-36">
                         <img class="h-7" src="./assets/coin.png" alt="">
                         <h2 class="font-bold"><span id="quota-balance">3000</span>BDT</h2>
                     </div>
 
                     <h1 class="text-lg font-bold">Aid for Injured in the Quota Movement</h1>
-                    <p class="py-6"> The recent floods in Noakhali have caused significant damage to homes
-                        infrastructure. Your donation will help provide essential supplies and to those affected
-                        by
-                        this disaster. Every contribution, big or small, makes difference. Please join us in
-                        supporting the relief efforts and making a positive impact on the lives of those in
-                        need.
+                    <p class="py-6"> Financial contributions are crucial to sustaining the movement. Every donation helps fund medical aid, legal support, and essential supplies for protesters.
                     </p>
                     <input id="donation-input3" type="text" placeholder="Write Donation Amount"
                         class="input input-bordered w-full " />
                     <div class="label">
                         <button onclick="donationHandle3(event)"
-                            class=" font-bold rounded-md w-full text-center bg-[#B4F461] md:px-10 px-5 py-2 md:py-5 sm:btn-sm items-center flex justify-center hover:bg-[#B4F461]">Donation</button>
+                            class=" font-bold rounded-md w-full text-center bg-[#B4F461] md:px-10 px-5 py-2 md:py-5 sm:btn-sm items-center flex justify-center hover:bg-[#B4F461]">Donation Now</button>
                     </div>
                 </div>
             </div>
@@ -155,37 +144,54 @@
             </div>
         </div>
         <!-- =============================================== Blog section ============================================== -->
-         <div id="blog-section" class="hidden w-11/12 mx-auto mt-44">
+        <div id="blog-section" class="hidden w-11/12 mx-auto mt-44">
             <h2 class="font-bold text-3xl mb-8">Important FAQ </h2>
             <div class="collapse collapse-arrow mb-5 bg-base-200">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                    <p>The Document Object Model is a programming interface for web documents. It represents the structure of a web page as a tree of objects, making it possible for programming languages like JavaScript to manipulate the content, structure, and style of a web document dynamically.</p>
                 </div>
-              </div>
-              <div class="collapse collapse-arrow mb-5 bg-base-200">
+            </div>
+            <div class="collapse collapse-arrow mb-5 bg-base-200">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                    <p><span class="font-bold text-lg">1. getElementById() </span><br>Selects an element by its unique id attribute.</p>
+                    <p><span class="font-bold text-lg">2. getElementsByClassName()</span><br> Selects all elements with a specific class. This method returns an HTMLCollection (a live collection of elements).</p>
+                    <p><span class="font-bold text-lg">3. getElementsByTagName()</span><br>Selects all elements with a specific tag name (e.g., div, p, etc.).</p>
+                    <p><span class="font-bold text-lg">4. querySelector()</span><br>Selects the first element that matches a CSS selector.</p>
+                    <p><span class="font-bold text-lg">5. querySelectorAll()</span><br> Selects all elements that match a CSS selector. This returns a static NodeList.</p>
+                    <p><span class="font-bold text-lg">6. getElementsByName()</span><br>Selects all elements with a specific name attribute, commonly used for form elements.</p>
                 </div>
-              </div>
-              <div class="collapse collapse-arrow mb-5 bg-base-200">
+            </div>
+            <div class="collapse collapse-arrow mb-5 bg-base-200">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and
+                    why is it useful?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                    <p><span class="font-bold text-lg">Event delegation </span> is a technique where you attach a single event listener to a parent element to handle events from its child elements, instead of adding listeners to each child. This works because events bubble up from the child to the parent in the DOM.</p>
+                    <p><span class="font-bold text-lg">1. Better performance:</span> Fewer event listeners, especially in large or dynamic lists, reduces memory usage.</p>
+                    <p><span class="font-bold text-lg">2. Handles dynamic elements:</span> New elements added to the DOM automatically work with the parent’s event listener.</p>
+                    <p><span class="font-bold text-lg">3. Cleaner code:</span> You write fewer event listeners, making the code easier to maintain.</p>
                 </div>
-              </div>
-              <div class="collapse collapse-arrow bg-base-200">
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                    using the DOM?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                    <p class="font-bold text-lg">1. Manipulate Attributes:</p>
+                    <p>Get an attribute</p>
+                    <p>Set an attribute</p>
+                    <p>Remove an attribute</p>
+                    <p class="font-bold text-lg">2. Manipulate Styles:</p>
+                    <p>Directly change a style</p>
+                    <p>Add multiple styles using CSS class</p>
+                    <p>Remove a class</p>
                 </div>
-              </div>
-         </div>
+            </div>
+        </div>
     </div>
 
 

@@ -27,11 +27,11 @@ function donationHandle(event) {
         return alert('Uncufficent Balance')
     }
     const newCurrentBalance = currentBalance - donationInputValue;
-    currentBalanceEl.innerText = newCurrentBalance;
+    currentBalanceEl.innerText = newCurrentBalance.toFixed(2);
 
     const noakhaiBalance = parseFloat(noakhaiBalanceEl.innerText);
     const newNoakhaliBalance = noakhaiBalance + donationInputValue;
-    noakhaiBalanceEl.innerText = newNoakhaliBalance;
+    noakhaiBalanceEl.innerText = newNoakhaliBalance.toFixed(2);
 
     // history list 
     const historyList = document.createElement("div");
@@ -59,12 +59,15 @@ function donationHandle2(event) {
     }
     const donationInputValue = parseFloat(donationInput);
     const currentBalance = parseFloat(currentBalanceEl.innerText);
+    if(currentBalance < donationInputValue){
+        return alert('Uncufficent Balance')
+    }
     const newCurrentBalance = currentBalance - donationInputValue;
-    currentBalanceEl.innerText = newCurrentBalance;
+    currentBalanceEl.innerText = newCurrentBalance.toFixed(2);
 
     const feniBalance = parseFloat(feniBalanceEl2.innerText);
     const newfeniBalance = feniBalance + donationInputValue;
-    feniBalanceEl2.innerText = newfeniBalance;
+    feniBalanceEl2.innerText = newfeniBalance.toFixed(2);
 
     // history list 
     const historyList = document.createElement("div");
@@ -88,11 +91,14 @@ function donationHandle3(event) {
     }
     const donationInputValue = parseFloat(donationInput);
     const currentBalance = parseFloat(currentBalanceEl.innerText);
+    if(currentBalance < donationInputValue){
+        return alert('Uncufficent Balance')
+    }
     const newCurrentBalance = currentBalance - donationInputValue;
-    currentBalanceEl.innerText = newCurrentBalance;
+    currentBalanceEl.innerText = newCurrentBalance.toFixed(2);
     const quotaBalance = parseFloat(quotaBalanceEl3.innerText);
     const newNquotaBalance = quotaBalance + donationInputValue;
-    quotaBalanceEl3.innerText = newNquotaBalance;
+    quotaBalanceEl3.innerText = newNquotaBalance.toFixed(2);
 
     // history list 
     const historyList = document.createElement("div");
@@ -111,7 +117,7 @@ function donationHandle3(event) {
 }
 
 // ===========================================================================================================
-// history section 
+// history button
 const donationTab = document.getElementById('donation-tab');
 const historyTab = document.getElementById('history-tab');
 const mainSection = document.getElementById('main-section')
@@ -130,6 +136,7 @@ historyTab.addEventListener('click', function () {
 
 
 })
+// donation Button
 donationTab.addEventListener('click', function () {
     historyTab.classList.remove("bg-[#B4F461]", "focus:border-none", "duration-200", "text-white");
 
@@ -154,6 +161,7 @@ const blog = document.getElementById('blog-btn').addEventListener('click', funct
     document.getElementById("history-section").classList.add("hidden")
 
     donationTab.classList.remove("bg-[#B4F461]", "focus:border-none", "duration-200", "text-white");
+    historyTab.classList.remove("bg-[#B4F461]", "focus:border-none", "duration-200", "text-white");
 
 })
 
