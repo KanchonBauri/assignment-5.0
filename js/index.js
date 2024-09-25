@@ -38,8 +38,8 @@ function donationHandle(event) {
     historyList.className = " rounded-xl border border-red-500 font-semibold p-5 mb-5";
 
     historyList.innerHTML = `
-    <p class="text-black text-xl">${donationInputValue} Taka is Donated for Food at Noakhali, Bangladesh</p>
-    <p class="text-gray-500" >${new Date().toLocaleDateString()} +6066 (Bangladesh Standard Time)</p>
+    <p class="text-black text-xl">${donationInputValue.toFixed(2)} Taka is Donated for Food at Noakhali, Bangladesh</p>
+    <p class="text-gray-500" >${new Date()}</p>
     `
     historyContainer.insertBefore(historyList, historyContainer.firstChild)
 
@@ -74,8 +74,8 @@ function donationHandle2(event) {
     historyList.className = " rounded-xl border border-red-500 font-semibold p-5 mb-5 bg-white ";
 
     historyList.innerHTML = `
-     <p class="text-black text-xl">${donationInputValue} Taka is Donated for Flood Relief in Feni, Bangladesh</p>
-     <p class="text-gray-500" >${new Date().toLocaleDateString()} +6066 (Bangladesh Standard Time)</p>
+     <p class="text-black text-xl">${donationInputValue.toFixed(2)} Taka is Donated for Flood Relief in Feni, Bangladesh</p>
+     <p class="text-gray-500" >${new Date()}</p>
  
      `
     historyContainer.insertBefore(historyList, historyContainer.firstChild)
@@ -105,8 +105,8 @@ function donationHandle3(event) {
     historyList.className = " rounded-xl border border-red-500 font-semibold p-5 mb-5  bg-white ";
 
     historyList.innerHTML = `
-     <p class="text-black text-xl">${donationInputValue} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
-     <p class="text-gray-500" >${new Date().toLocaleDateString()} +6066 (Bangladesh Standard Time)</p>
+     <p class="text-black text-xl">${donationInputValue.toFixed(2)} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+     <p class="text-gray-500" >${new Date()}</p>
  
      `
     historyContainer.insertBefore(historyList, historyContainer.firstChild);
